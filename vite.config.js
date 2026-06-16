@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/chess-crucible/',
   // Use ./src as the root directory for source files
   root: './src',
   envDir: '../',
