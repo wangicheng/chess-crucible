@@ -1,0 +1,312 @@
+/* ============================================================
+   Chess Insight — Animations
+   Keyframe definitions & utility classes
+   ============================================================ */
+
+
+/* ── Keyframes ──────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 12px hsla(210, 100%, 60%, 0.15),
+      0 0 24px hsla(210, 100%, 60%, 0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 20px hsla(210, 100%, 60%, 0.3),
+      0 0 40px hsla(210, 100%, 60%, 0.15);
+  }
+}
+
+@keyframes correctFlash {
+  0% {
+    background-color: hsla(152, 60%, 48%, 0);
+  }
+  25% {
+    background-color: hsla(152, 60%, 48%, 0.2);
+  }
+  50% {
+    background-color: hsla(152, 60%, 48%, 0.1);
+  }
+  75% {
+    background-color: hsla(152, 60%, 48%, 0.15);
+  }
+  100% {
+    background-color: hsla(152, 60%, 48%, 0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  50%,
+  90% {
+    transform: translateX(-4px);
+  }
+  30%,
+  70% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* ── Utility Classes ────────────────────────────────────────── */
+
+.animate-fadeIn {
+  animation: fadeIn 300ms ease both;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slideUp {
+  animation: slideUp 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slideDown {
+  animation: slideDown 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-pulse {
+  animation: pulse 500ms ease both;
+}
+
+.animate-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+.animate-glowPulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.animate-correctFlash {
+  animation: correctFlash 800ms ease both;
+}
+
+.animate-shake {
+  animation: shake 400ms ease both;
+}
+
+.animate-bounceIn {
+  animation: bounceIn 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+
+/* ── Delay Utilities ────────────────────────────────────────── */
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animate-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animate-delay-700 {
+  animation-delay: 700ms;
+}
+
+.animate-delay-800 {
+  animation-delay: 800ms;
+}
+
+.animate-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+
+/* ── Duration Utilities ─────────────────────────────────────── */
+
+.animate-duration-150 {
+  animation-duration: 150ms;
+}
+
+.animate-duration-300 {
+  animation-duration: 300ms;
+}
+
+.animate-duration-500 {
+  animation-duration: 500ms;
+}
+
+.animate-duration-700 {
+  animation-duration: 700ms;
+}
+
+.animate-duration-1000 {
+  animation-duration: 1000ms;
+}
+
+
+/* ── Reduced Motion ─────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
