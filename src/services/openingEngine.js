@@ -27,7 +27,7 @@ export class OpeningEngine {
 
   async loadDictionary() {
     if (!this.dictPromise) {
-      this.dictPromise = fetch('/openings.json')
+      this.dictPromise = fetch(`${import.meta.env.BASE_URL}openings.json`)
         .then(res => res.json())
         .then(data => {
           this.openingsDict = data;
