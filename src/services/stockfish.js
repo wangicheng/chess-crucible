@@ -53,7 +53,7 @@ export class StockfishService {
 
     return new Promise((resolve, reject) => {
       try {
-        this.worker = new Worker('/stockfish-worker.js');
+        this.worker = new Worker(`${import.meta.env.BASE_URL}stockfish-worker.js`);
       } catch (err) {
         reject(new Error(`Failed to create Stockfish worker: ${err.message}`));
         return;
